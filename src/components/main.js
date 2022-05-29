@@ -14,7 +14,7 @@ import ProductsList from './productslist';
 const Main = () => {
 
     const [query, setQuery] = 
-    useState("http://api.devtoolstech.in/ecommerce/products");
+    useState("https://expressmiddle.herokuapp.com/users/api.devtoolstech.in/ecommerce/products");
     const {data, isError, isLoading} = useFetchData(query);
 
     return(

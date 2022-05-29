@@ -7,7 +7,7 @@ import Spinner from "./spinner";
 const Categories = ({setQuery}) => {
 
     // categories api url
-     const categoryapi = "http://api.devtoolstech.in/ecommerce/categories";
+     const categoryapi = "https://expressmiddle.herokuapp.com/users/api.devtoolstech.in/ecommerce/categories";
      const {data, isError, isLoading} = useFetchData(categoryapi);
      
 
@@ -15,8 +15,8 @@ const Categories = ({setQuery}) => {
     const handleClick = e => {
         const categoryId = e.target.value;
         categoryId==="all" ? 
-        setQuery("http://api.devtoolstech.in/ecommerce/products") :
-        setQuery("http://api.devtoolstech.in/ecommerce/products?categoryId=" 
+        setQuery("https://expressmiddle.herokuapp.com/users/api.devtoolstech.in/ecommerce/products") :
+        setQuery("https://expressmiddle.herokuapp.com/users/api.devtoolstech.in/ecommerce/products?categoryId=" 
         + categoryId.toString());
 
         document.getElementById("myDropdown")
