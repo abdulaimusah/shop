@@ -33,6 +33,11 @@ const FilterMenu = ({setFilterOptions}) => {
     const clearFilter = () => {
         setFilterOptions("");
         setSortOrder("");
+        setAvgRating("");
+        setColor("");
+        setFromPrice("");
+        setToPrice("");
+        setSortValue("");
     }
 
     const [sortOrder, setSortOrder] = useState("");
