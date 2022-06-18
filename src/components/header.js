@@ -15,7 +15,7 @@ const Header = ({theme, setTheme}) => {
         <header className="h-12 md:h-14 border-b border-blue-100
         shadow shadow-blue-100 flex justify-around bg-gray-800
         flex-shrink-0 px-2 md:px-5 dark:bg-slate-900 
-      text-white dark:shadow-none sticky top-0 ">
+      text-white dark:shadow-none sticky top-0 items-center">
 
             <button>
                 <Link to="/">Shop</Link>

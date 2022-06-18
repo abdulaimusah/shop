@@ -6,22 +6,28 @@ import Spinner from './spinner';
 
 // this components renders a list of products
 // based on selected category
-const ProductsList = ({setQuery, data, isError, isLoading}) => {  
-
+const ProductsList = ({setQuery, data, isError, isLoading,
+                     filterOptions, setFilterOptions,
+                     setSortValue}) => {  
+                         
     return(
         <section className="md:flex md:flex-row md:gap-5" >
-            <Categories setQuery={setQuery } />
-            <div className="md:flex-3/4 justify-between
-            "> 
+            <Categories setQuery={setQuery} filterOptions={filterOptions}
+              setFilterOptions={setFilterOptions} 
+              setSortValue={setSortValue} />
+            <div className="md:flex-3/4 justify-between flex"> 
                               
             {isLoading && <Spinner />}
-            {!data && <p>Failed to load products </p>}
-            </div>
+            
+            { (!isLoading && !data) && <p className="items-center" >
+              Failed to load products </p>}
+            
             <div className="flex flex-wrap gap-2 md:gap-4">
               {data && data.map(item => (
                   <Card key={item.id.toString()} product={item}/>
               ))}
             
+            </div>
             </div>
         </section>
     )

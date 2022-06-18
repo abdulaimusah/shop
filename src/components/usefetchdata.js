@@ -16,10 +16,7 @@ const useFetchData = (query) => {
             fetch(query)
             .then(res => res.json())
             .then(res => setData(res))
-            .catch(error => {
-                setIsError(true);
-                console.log("error", error)
-            })
+            .catch(error => setIsError(true))
             .finally(() => setIsLoading(false));
         }
 

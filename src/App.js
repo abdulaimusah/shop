@@ -13,7 +13,7 @@ const App = () => {
 
   return(
     <div className={`flex flex-col min-h-screen font-medium
-    font-sans   ${theme}`}>
+    font-sans   ${theme}`} >
       <Header setTheme={setTheme} theme={theme} />
       <Main />
       <Footer />     
