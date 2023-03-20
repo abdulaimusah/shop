@@ -49,7 +49,7 @@ const FilterMenu = ({setFilterOptions}) => {
    
 
     return(
-        <div id="filter" className="hidden z-10 fixed top-22
+        <div id="filter" className="hidden z-20 fixed top-22
         md:static md:block md:z-0 md:top-26 dropdown bg-white
         dark:bg-slate-700 "  >
             <h3>Filters</h3>

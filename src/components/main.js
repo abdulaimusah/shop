@@ -14,7 +14,7 @@ import ProductsList from './productslist';
 const Main = () => {
 
     const baseUrl = 
-    "https://expressmiddle.herokuapp.com/users/api.devtoolstech.in/ecommerce/products";
+    "https://middle-9bkt.onrender.com/users/api.devtoolstech.in/ecommerce/products";
 
     const [query, setQuery] = useState("");
     const [filterOptions, setFilterOptions] = useState("");

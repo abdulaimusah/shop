@@ -25,7 +25,7 @@ const Categories = ({ setQuery, setFilterOptions}) => {
         sticky top-12 md:static" >
             <div className="md:sticky md:top-16 top-15" >
             {isError && <p>Couldn't load categories</p>}
-            {isLoading && <Spinner />}
+            {/*isLoading && <Spinner />*/}
 
             <button onClick={() => {
                 document.getElementById("myDropdown")
@@ -33,7 +33,7 @@ const Categories = ({ setQuery, setFilterOptions}) => {
               }} 
               id="dropdownToggle"
               className="text-white
-              bg-blue-800 hover:bg-blue-600  focus:outline-none
+              bg-blue-800 hover:bg-blue-600 z-100 focus:outline-none
                font-medium rounded-md text-sm px-4 py-2 
               text-center inline-flex items-center dark:bg-blue-600 
               dark:hover:bg-blue-700 dropdownButton" 
@@ -44,7 +44,7 @@ const Categories = ({ setQuery, setFilterOptions}) => {
               </path></svg>
             </button>
 
-            <button className="ml-1 text-white z-200 items-center
+            <button className="ml-1 text-white z-100 items-center
               bg-indigo-800 py-2 px-2 md:hidden inline-flex
               rounded-md text-sm font-medium focus:outline-none
               hover:bg-indigo-700 active:bg-indigo-700 
@@ -60,7 +60,7 @@ const Categories = ({ setQuery, setFilterOptions}) => {
               </path></svg>
             </button> 
             
-            <div id="myDropdown" className="z-10 md:z-0 hidden 
+            <div id="myDropdown" className="z-100 md:z-0 hidden 
             bg-white divide-y divide-gray-100 rounded shadow  dropdown
              dark:bg-gray-700 absolute w-40 md:w-full" >
             { (!isError && !isLoading) && (<ul  className="py-1 text-sm w-full
